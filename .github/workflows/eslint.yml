@@ -11,6 +11,9 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
+  
+  permissions:
+    contents: none
 
     steps:
       - uses: actions/checkout@v2
