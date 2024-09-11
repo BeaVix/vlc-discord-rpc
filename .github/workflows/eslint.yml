@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+    contents: none
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,9 +14,6 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
-  
-  permissions:
-    contents: none
 
     steps:
       - uses: actions/checkout@v2
